@@ -17,13 +17,13 @@ select
 	product_name,
     quantity
 from order_items
-inner join order_items
+inner join products
 on order_items.product_id = products.product_id
 inner join orders
 on  orders.order_id = order_items.order_id
 inner join customers
 on customers.customer_id = orders.customer_id
-where costumer_id = 1;
+where customers.customer_id = 1;
 
 SELECT products.product_name, order_items.quantity
 FROM order_items
